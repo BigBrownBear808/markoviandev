@@ -14,11 +14,15 @@
 
 .hero__logo-mark {
   font-family: var(--font-display);
-  font-size: 96px;
+  font-size: 80px;
   font-weight: 800;
   color: var(--color-green);
   line-height: 1;
   letter-spacing: -2px;
+}
+
+.hero__name-rest {
+  color: var(--color-text-body);
 }
 
 .hero__tagline {
@@ -60,6 +64,6 @@
     padding-bottom: 72px;
   }
   .hero__logo-mark {
-    font-size: 72px;
+    font-size: 60px;
   }
 }

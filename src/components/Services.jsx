@@ -3,24 +3,12 @@ import { content } from '../content/content'
 import './Services.css'
 
 export default function Services() {
-  const { heading, marf, lines } = content.services
+  const { heading, lines } = content.services
 
   return (
     <section id="services" className="services">
       <div className="content-wrapper">
         <h2 className="services__heading">{heading}</h2>
-
-        {/* MARF framework explainer */}
-        <div className="services__marf">
-          <h3 className="services__marf-heading">{marf.heading}</h3>
-          <p className="services__marf-body">{marf.body}</p>
-          <ul className="services__marf-dimensions">
-            {marf.dimensions.map(dim => (
-              <li key={dim}>{dim}</li>
-            ))}
-          </ul>
-          <p className="services__marf-output">{marf.output}</p>
-        </div>
 
         {/* Four service lines */}
         <div className="services__lines">

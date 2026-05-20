@@ -3,13 +3,12 @@ import { content } from '../content/content'
 import './About.css'
 
 export default function About() {
-  const { heading, intro, team } = content.about
+  const { heading, team } = content.about
 
   return (
     <section id="about" className="about">
       <div className="content-wrapper">
         <h2 className="about__heading">{heading}</h2>
-        <p className="about__intro">{intro}</p>
 
         <div className="about__team">
           {team.map(member => (

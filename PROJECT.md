@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-A single-page marketing website for **Markovian**, a Cambridge-based AI compliance consultancy.
+A single-page marketing website for **Markovian**, a London-based AI compliance consultancy.
 The site targets CTOs, founders, and technical leads at SME technology companies (10–200 employees)
 who need to understand what Markovian does and get in touch.
 
@@ -29,9 +29,10 @@ All sections live on a single scrollable page. Navigation links anchor-scroll to
 | Section | Anchor | Purpose |
 |---|---|---|
 | Hero | `#top` | Company name, one-line tagline, CTA button |
-| Mission | `#mission` | What Markovian does and who it's for |
+| What We Do | `#mission` | What Markovian does and who it's for |
 | Why Now | `#why-now` | Regulatory urgency — the August 2026 enforcement window |
-| Services | `#services` | MARF methodology + four service lines (no pricing) |
+| MARF | `#marf` | Proprietary risk framework — five-dimension scoring model |
+| Services | `#services` | Four service lines (no pricing) |
 | About | `#about` | Three team member cards |
 | Contact | `#contact` | Email, LinkedIn, simple contact form |
 
@@ -44,9 +45,9 @@ All sections live on a single scrollable page. Navigation links anchor-scroll to
 ## Content Summary Per Section
 
 ### Hero
-- Logo: Bold Gothic capital **M** (dark forest green on off-white)
+- Company name: **Markovian** — "M" in dark forest green (display font), "arkovian" in dark grey
 - Tagline: *"AI Compliance Consulting for the Age of Regulated AI"*
-- Sub-line: Cambridge-based. UK/EU AI Act · GDPR · ISO/IEC 42001
+- Sub-line: UK/EU AI Act · GDPR · ISO/IEC 42001
 - CTA: "Get in Touch" → scrolls to `#contact`
 
 ### Mission
@@ -62,9 +63,8 @@ Three regulatory forces have converged:
 2. **SME AI adoption accelerating** — FinTechs, LegalTechs, HR platforms deploying AI into hiring, lending, diagnostics with no compliance infrastructure
 3. **ISO/IEC 42001** — First international AI management system standard (Dec 2023); enterprise procurement and government contracts increasingly requiring it
 
-### Services
+### MARF
 
-#### The Markovian AI Risk Framework (MARF)
 Proprietary risk scoring model used at the start of every engagement. Takes structured inputs about a client's AI system and produces a weighted risk map across five dimensions:
 - Regulatory Exposure
 - Decision Impact
@@ -72,7 +72,7 @@ Proprietary risk scoring model used at the start of every engagement. Takes stru
 - Technical Opacity
 - Governance Maturity
 
-Output: risk tier (Critical / High / Medium / Low), top vulnerabilities, prioritised remediation plan.
+### Services
 
 #### Service Line 1: AI Risk Snapshot
 - MARF diagnostic report
@@ -99,7 +99,7 @@ Three team members:
 
 **Ben** — Co-Founder. UCL Statistics. Former prediction modelling specialist at Statz.ai. AI safety and development team at GB Bank. Lead AI compliance specialist.
 
-**Mat** — Co-Founder. Cambridge Electrical Engineering. GPU engineering internship at Qualcomm. Company strategy, business development, and operations.
+**Mat** — Co-Founder. Cambridge Electrical Engineering. Specialty in Hardware. Company strategy, business development, and operations.
 
 **Sassan** — AI Safety & Research. Cambridge Information Engineering (AI specialisation). AI safety research background. Technical safety framing and research partnerships.
 
@@ -107,8 +107,7 @@ Three team members:
 - Email: (to be confirmed — use hello@markovian.co.uk as placeholder)
 - LinkedIn: (to be added)
 - Simple contact form: Name, Email, Message, Send
-- Response time note: "We respond within 24 hours"
-- Address: Cambridge, UK
+- Address: London, UK
 
 ---
 
@@ -137,7 +136,6 @@ Three team members:
 
 - Minimal. Professional. Technical without being inaccessible.
 - No marketing hyperbole. Short sentences. Direct claims.
-- The voice from the company overview: *"We are not a slideshow factory."*
 
 ### Layout
 
@@ -160,7 +158,8 @@ markovian-site/
 │   │   ├── Hero.jsx             # Landing hero section
 │   │   ├── Mission.jsx          # Mission section
 │   │   ├── WhyNow.jsx           # Why Now section
-│   │   ├── Services.jsx         # MARF + service lines
+│   │   ├── MARF.jsx             # MARF framework section
+│   │   ├── Services.jsx         # Four service lines
 │   │   ├── About.jsx            # Team section
 │   │   ├── Contact.jsx          # Contact form + details
 │   │   └── Footer.jsx           # Footer with nav + legal links

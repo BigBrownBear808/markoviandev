@@ -9,18 +9,19 @@ export const content = {
   nav: {
     logo: 'M',
     links: [
-      { label: 'Mission',  href: '#mission'  },
-      { label: 'Why Now',  href: '#why-now'  },
-      { label: 'Services', href: '#services' },
-      { label: 'About',    href: '#about'    },
-      { label: 'Contact',  href: '#contact'  },
+      { label: 'What We Do', href: '#mission'  },
+      { label: 'Why Now',   href: '#why-now'  },
+      { label: 'MARF',      href: '#marf'     },
+      { label: 'Services',  href: '#services' },
+      { label: 'About',     href: '#about'    },
+      { label: 'Contact',   href: '#contact'  },
     ],
   },
 
   hero: {
-    logo: 'M',
+    name: 'Markovian',
     tagline: 'AI Compliance Consulting for the Age of Regulated AI',
-    subline: 'Cambridge-based. UK/EU AI Act · GDPR · ISO/IEC 42001',
+    subline: 'UK/EU AI Act · GDPR · ISO/IEC 42001',
     cta: 'Get in Touch',
     ctaHref: '#contact',
   },
@@ -65,22 +66,90 @@ export const content = {
     ],
   },
 
+  marf: {
+    heading: 'The Markovian AI Risk Framework (MARF)',
+    body:
+      'Our proprietary risk scoring model is used at the start of every engagement. It takes structured inputs about a client\'s AI system and produces a weighted risk map across five dimensions.',
+    dimensions: [
+      {
+        name: 'Regulatory Exposure',
+        summary: 'Which laws apply to your system, and how severely.',
+        description:
+          'Not every AI system carries the same legal burden. Regulatory Exposure maps the specific frameworks that apply to a client\'s system based on their sector, geography, and what their AI actually does. A credit scoring model used by a UK FinTech serving EU customers will sit under the EU AI Act, GDPR, FCA model risk guidance, and Consumer Duty simultaneously. A recruitment tool deployed into the EU triggers EU AI Act high-risk classification automatically. This dimension identifies that stack — and the severity of each obligation — before anything else is assessed.',
+        clientNote:
+          'You may be subject to regulations you are not aware of. The first step is knowing exactly which ones apply and what they require, so that nothing is missed.',
+        anchors: [
+          'EU AI Act — risk tier classification (unacceptable / high / limited / minimal)',
+          'GDPR — applicability based on data subjects and processing activities',
+          'UK Data (Use and Access) Act 2025',
+          'FCA model risk guidance (for regulated financial services firms)',
+        ],
+      },
+      {
+        name: 'Decision Impact',
+        summary: 'How serious and irreversible the consequences are if your AI gets it wrong.',
+        description:
+          'AI systems that inform or make decisions affecting people\'s access to credit, employment, healthcare, or legal outcomes carry a fundamentally different risk profile than those that recommend a playlist. Decision Impact scores the severity of harm a wrong output could cause, how reversible that harm is, and how directly the AI\'s output drives the decision versus a human remaining in the loop. A model that automatically rejects a loan application with no human review scores higher than one that flags candidates for human shortlisting. This dimension directly determines whether a system qualifies as high-risk under the EU AI Act and whether GDPR Article 22 protections apply.',
+        clientNote:
+          'If your system makes or materially influences consequential decisions about people, specific legal obligations follow — including the right to human review, meaningful explanation, and the ability to contest the outcome. This dimension tells you whether you are in that territory.',
+        anchors: [
+          'EU AI Act Article 6 — high-risk AI system classification criteria',
+          'GDPR Article 22 — automated decision-making and profiling',
+          'EU AI Act Annex III — high-risk use case list (credit, employment, education, healthcare, law enforcement)',
+        ],
+      },
+      {
+        name: 'Data Sensitivity',
+        summary: 'What personal data your system processes, and the obligations that creates.',
+        description:
+          'AI systems are data-intensive by nature — but not all data carries the same legal weight. Data Sensitivity assesses the classification and volume of personal data a client\'s system processes, with particular attention to special category data under GDPR (health, biometric, racial or ethnic origin, political opinions, religious beliefs, sexual orientation). It also covers whether the system processes data about children, whether it generates inferences that constitute personal data even if raw inputs do not, and whether data is used for training in ways that require separate legal basis. The larger the volume and the more sensitive the category, the stricter the obligations around lawful basis, data minimisation, retention, and subject rights.',
+        clientNote:
+          'If your model touches health records, financial data, biometric identifiers, or any data that could be used to profile individuals, you face a higher compliance burden — and a higher risk of enforcement action if that burden is not met.',
+        anchors: [
+          'GDPR Article 9 — special category data',
+          'GDPR Article 22 — profiling',
+          'ISO/IEC 42001 Section A.7 — AI-specific data governance requirements',
+          'EU AI Act Article 10 — data governance obligations for high-risk systems',
+        ],
+      },
+      {
+        name: 'Technical Opacity',
+        summary: 'How explainable your model is — and whether regulators can audit it.',
+        description:
+          'Regulatory frameworks increasingly require that AI systems be explainable, auditable, and transparent — not just accurate. Technical Opacity assesses how interpretable a client\'s model is: whether it can produce meaningful explanations for its outputs, whether its decision logic can be interrogated by a developer or a regulator, and whether the system maintains sufficient logs to reconstruct why a given decision was made. A large language model generating free-text outputs scores differently from a logistic regression on tabular data. This dimension also evaluates whether the client\'s existing documentation — model cards, data sheets, system logs — meets the standard required under the EU AI Act for high-risk systems.',
+        clientNote:
+          '"The model said so" is not a legally sufficient explanation. If your system cannot explain its outputs in human-understandable terms — or cannot be audited after the fact — you face exposure under both GDPR and the EU AI Act. This dimension identifies where that gap is and what needs to be documented or rebuilt.',
+        anchors: [
+          'GDPR Recital 71 — right to explanation for automated decisions',
+          'EU AI Act Articles 13–14 — logging, traceability, human oversight',
+          'ISO/IEC 42001 Section B.6 — AI system transparency and explainability',
+          'EU AI Act Article 11 — technical documentation requirements for high-risk systems',
+        ],
+      },
+      {
+        name: 'Governance Maturity',
+        summary: 'How much oversight, documentation, and process your organisation already has in place.',
+        description:
+          'Technical compliance is necessary but not sufficient. Regulators also assess whether an organisation has the governance infrastructure to manage AI risk on an ongoing basis — not just at a point in time. Governance Maturity evaluates the gap between a client\'s current state and what is required: Does a risk register exist? Is there a defined process for monitoring model performance in production? Who is accountable when the AI produces a harmful output? Has the system undergone any form of conformity assessment? Does the organisation have a policy for training data management, model versioning, or incident response? This dimension maps the distance between where the client is and where ISO/IEC 42001 certification — or EU AI Act compliance — requires them to be.',
+        clientNote:
+          'The EU AI Act does not just regulate AI systems — it regulates the organisations deploying them. Without governance processes, even a technically sound model can expose the company to enforcement action. This dimension tells you how much organisational work sits alongside the technical work.',
+        anchors: [
+          'ISO/IEC 42001 — AI management system requirements (full standard)',
+          'EU AI Act Article 9 — risk management system obligations for high-risk AI',
+          'SOC 2 Trust Services Criteria — availability, processing integrity, confidentiality',
+          'EU AI Act Article 17 — quality management system requirements',
+        ],
+      },
+    ],
+    outputNote: {
+      heading: 'Output: Risk Tier',
+      body:
+        'After all five dimensions are scored, MARF produces a risk tier (Critical / High / Medium / Low), a prioritised list of the top 3–5 vulnerabilities identified, and a recommended action plan ordered by regulatory urgency and implementation effort.',
+    },
+  },
+
   services: {
     heading: 'Services',
-    marf: {
-      heading: 'The Markovian AI Risk Framework (MARF)',
-      body:
-        'Our proprietary risk scoring model is used at the start of every engagement. It takes structured inputs about a client\'s AI system and produces a weighted risk map across five dimensions.',
-      dimensions: [
-        'Regulatory Exposure',
-        'Decision Impact',
-        'Data Sensitivity',
-        'Technical Opacity',
-        'Governance Maturity',
-      ],
-      output:
-        'Output: risk tier (Critical / High / Medium / Low), top vulnerabilities, and a prioritised remediation plan.',
-    },
     lines: [
       {
         number: '01',
@@ -115,7 +184,6 @@ export const content = {
 
   about: {
     heading: 'About Us',
-    intro: 'We are not a slideshow factory. We are practitioners.',
     team: [
       {
         name: 'Ben',
@@ -126,28 +194,27 @@ export const content = {
       {
         name: 'Mat',
         role: 'Co-Founder — Strategy & Operations',
-        bio: 'Cambridge Electrical Engineering. GPU engineering internship at Qualcomm. Company strategy, business development, and operations.',
-        linkedin: '#', // confirm LinkedIn URL before going live
+        bio: 'Cambridge Electrical Engineering. Specialty in Hardware.\nCompany strategy, business development, and operations.',
+        linkedin: 'https://www.linkedin.com/in/matyas-vecsei/', // confirm LinkedIn URL before going live
       },
       {
         name: 'Sassan',
         role: 'AI Safety & Research',
-        bio: 'Cambridge Information Engineering (AI specialisation). AI safety research background. Technical safety framing and research partnerships.',
+        bio: 'Cambridge Information Engineering. AI safety research background.\nTechnical safety framing and research partnerships.',
         linkedin: '#', // confirm LinkedIn URL before going live
       },
     ],
   },
 
   contact: {
-    heading: 'Get in Touch',
-    intro: 'We respond within 24 hours.',
+    heading: 'Contact',
     email: 'hello@markovian.co.uk', // confirm correct address before going live
     linkedin: 'linkedin.com/company/markovian', // confirm URL before going live
-    address: 'Cambridge, UK',
+    address: 'London, UK',
     form: {
-      namePlaceholder: 'Your name',
-      emailPlaceholder: 'Your email',
-      messagePlaceholder: 'Tell us about your AI system and what you need help with',
+      namePlaceholder: 'Name',
+      emailPlaceholder: 'Email',
+      messagePlaceholder: 'Tell us more',
       submit: 'Send Message',
     },
   },
@@ -156,11 +223,12 @@ export const content = {
     logo: 'Markovian',
     tagline: 'AI Compliance Consulting',
     links: [
-      { label: 'Mission',  href: '#mission'  },
-      { label: 'Why Now',  href: '#why-now'  },
-      { label: 'Services', href: '#services' },
-      { label: 'About',    href: '#about'    },
-      { label: 'Contact',  href: '#contact'  },
+      { label: 'What We Do', href: '#mission'  },
+      { label: 'Why Now',   href: '#why-now'  },
+      { label: 'MARF',      href: '#marf'     },
+      { label: 'Services',  href: '#services' },
+      { label: 'About',     href: '#about'    },
+      { label: 'Contact',   href: '#contact'  },
     ],
     legal: `© ${new Date().getFullYear()} Markovian. All rights reserved.`,
   },

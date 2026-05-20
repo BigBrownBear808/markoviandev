@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Mission from './components/Mission'
 import WhyNow from './components/WhyNow'
+import MARF from './components/MARF'
 import Services from './components/Services'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -17,6 +18,7 @@ export default function App() {
         <Hero />
         <Mission />
         <WhyNow />
+        <MARF />
         <Services />
         <About />
         <Contact />

@@ -38,6 +38,9 @@ Full project context is in `PROJECT.md`.
 6. **Mobile-first.** All new components must be responsive. Test that content stacks cleanly
    on small screens. Use the breakpoints defined in `variables.css`.
 
+7. **Keep `README.md` up to date.** When making changes that affect the project structure,
+   tech stack, commands, or how to run the site, update `README.md` to reflect those changes.
+
 ---
 
 ## How to Edit Content
