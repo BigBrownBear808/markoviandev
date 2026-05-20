@@ -123,6 +123,17 @@
   background-color: var(--color-green-light);
 }
 
+.contact__success {
+  font-size: 16px;
+  color: var(--color-green);
+  padding: 24px 0;
+}
+
+.contact__error {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
 @media (max-width: 900px) {
   .contact__inner {
     grid-template-columns: 1fr;

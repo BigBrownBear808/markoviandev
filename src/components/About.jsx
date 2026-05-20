@@ -18,10 +18,17 @@ export default function About() {
                 <h3 className="about__card-name">{member.name}</h3>
                 <p className="about__card-role">{member.role}</p>
                 <p className="about__card-bio">{member.bio}</p>
-                {/* LinkedIn URL not yet confirmed — placeholder href */}
-                <a href={member.linkedin} className="about__card-linkedin" aria-label={`${member.name} on LinkedIn`}>
-                  LinkedIn
-                </a>
+                {member.linkedin && (
+                  <a
+                    href={member.linkedin}
+                    className="about__card-linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${member.name} on LinkedIn`}
+                  >
+                    LinkedIn
+                  </a>
+                )}
               </div>
             </div>
           ))}

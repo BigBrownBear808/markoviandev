@@ -189,33 +189,38 @@ export const content = {
         name: 'Ben',
         role: 'Co-Founder — Lead AI Compliance Specialist',
         bio: 'UCL Statistics. Former prediction modelling specialist at Statz.ai. AI safety and development at GB Bank.',
-        linkedin: '#', // confirm LinkedIn URL before going live
+        //linkedin: '#', // confirm LinkedIn URL before going live
       },
       {
         name: 'Mat',
         role: 'Co-Founder — Strategy & Operations',
         bio: 'Cambridge Electrical Engineering. Specialty in Hardware.\nCompany strategy, business development, and operations.',
-        linkedin: 'https://www.linkedin.com/in/matyas-vecsei/', // confirm LinkedIn URL before going live
+        //linkedin: 'https://www.linkedin.com/in/matyas-vecsei/', // confirm LinkedIn URL before going live
       },
       {
         name: 'Sassan',
         role: 'AI Safety & Research',
         bio: 'Cambridge Information Engineering. AI safety research background.\nTechnical safety framing and research partnerships.',
-        linkedin: '#', // confirm LinkedIn URL before going live
+        //linkedin: '#', // confirm LinkedIn URL before going live
       },
     ],
   },
 
   contact: {
     heading: 'Contact',
-    email: 'hello@markovian.co.uk', // confirm correct address before going live
-    linkedin: 'linkedin.com/company/markovian', // confirm URL before going live
+    email: 'contact@markovian.co.uk', // confirm correct address before going live
+    //linkedin: 'N/A', // confirm URL before going live
     address: 'London, UK',
     form: {
       namePlaceholder: 'Name',
       emailPlaceholder: 'Email',
       messagePlaceholder: 'Tell us more',
       submit: 'Send Message',
+      submitting: 'Sending…',
+      successMessage: "Thanks — we'll be in touch shortly.",
+      errorMessage: 'Something went wrong. Please try emailing us directly.',
+      // Paste your Formspree endpoint URL here (looks like https://formspree.io/f/xxxxxxxx)
+      formspreeEndpoint: 'https://formspree.io/f/mlgvjnvp',
     },
   },
 
