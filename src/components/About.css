@@ -1,0 +1,85 @@
+.about {
+  background-color: var(--color-bg);
+  padding: var(--section-padding-y) 0;
+}
+
+.about__heading {
+  font-size: clamp(28px, 3vw, 40px);
+  margin-bottom: 16px;
+}
+
+.about__intro {
+  font-size: 17px;
+  color: var(--color-text-muted);
+  margin-bottom: 56px;
+  font-style: italic;
+}
+
+.about__team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about__card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__card-initial {
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-green);
+  color: var(--color-bg);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.about__card-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.about__card-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.about__card-bio {
+  font-size: 15px;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.about__card-linkedin {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  align-self: flex-start;
+}
+
+.about__card-linkedin:hover {
+  color: var(--color-green);
+}
+
+@media (max-width: 900px) {
+  .about__team {
+    grid-template-columns: 1fr;
+  }
+}

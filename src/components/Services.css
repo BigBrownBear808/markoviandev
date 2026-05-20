@@ -1,0 +1,115 @@
+.services {
+  background-color: var(--color-surface);
+  padding: var(--section-padding-y) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.services__heading {
+  font-size: clamp(28px, 3vw, 40px);
+  margin-bottom: 48px;
+}
+
+/* MARF block */
+.services__marf {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 40px;
+  margin-bottom: 64px;
+}
+
+.services__marf-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.services__marf-body {
+  color: var(--color-text-body);
+  margin-bottom: 20px;
+  max-width: 640px;
+}
+
+.services__marf-dimensions {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.services__marf-dimensions li {
+  padding: 6px 14px;
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+}
+
+.services__marf-output {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Service lines */
+.services__lines {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__line {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  padding: 36px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.services__line:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.services__line-number {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-green);
+  letter-spacing: 0.08em;
+  padding-top: 4px;
+}
+
+.services__line-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.services__line-desc {
+  color: var(--color-text-body);
+  max-width: 600px;
+  margin-bottom: 14px;
+  line-height: 1.65;
+}
+
+.services__line-duration {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+  .services__marf {
+    padding: 24px;
+  }
+  .services__line {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
